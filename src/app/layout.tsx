@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { AuthProvider } from "@/lib/AuthContext";
 
 const sora = Sora({
   variable: "--font-sora-sans",
@@ -20,9 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} antialiased`}>
-        <Navbar />
-        {children}
+      <body className={`${sora.variable}`}>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
