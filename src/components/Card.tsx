@@ -8,7 +8,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ player }) => {
   return (
     <div className="flex flex-col border-b border-orange-500/50 p-4">
-      <div className="text-2xl font-bold">
+      <div className="text-2xl font-bold min-h-20">
         {player.first_name} {player.last_name}
       </div>
       <div className="text-sm text-gray-500">

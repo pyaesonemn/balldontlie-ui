@@ -56,8 +56,8 @@ export default function RegisterPage() {
   return (
     <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow">
       <div className="text-center">
-        <h1 className="text-2xl font-bold">Register</h1>
-        <p className="mt-2 text-gray-600">Create a new account</p>
+        <h1 className="text-2xl text-orange-600 font-bold">Register</h1>
+        <p className="mt-1 text-gray-600">Create a new account</p>
       </div>
 
       {error && (
@@ -66,7 +66,7 @@ export default function RegisterPage() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+      <form onSubmit={handleSubmit} className="mt-8 space-y-6 text-black">
         <div>
           <label
             htmlFor="username"
@@ -81,7 +81,7 @@ export default function RegisterPage() {
             required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder:text-black/20 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
           />
         </div>
 
@@ -99,7 +99,7 @@ export default function RegisterPage() {
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder:text-black/20 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
           />
         </div>
 
@@ -117,7 +117,7 @@ export default function RegisterPage() {
             required
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder:text-black/20 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
           />
         </div>
 
@@ -127,8 +127,8 @@ export default function RegisterPage() {
             disabled={isSubmitting}
             className={`w-full px-4 py-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
               isSubmitting
-                ? "bg-blue-400 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
+                ? "bg-orange-400 cursor-not-allowed"
+                : "bg-orange-600 hover:bg-orange-700"
             }`}
           >
             {isSubmitting ? "Registering..." : "Register"}
@@ -138,7 +138,7 @@ export default function RegisterPage() {
         <div className="text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{" "}
-            <Link href="/login" className="text-blue-600 hover:underline">
+            <Link href="/login" className="text-orange-600 hover:underline">
               Login
             </Link>
           </p>

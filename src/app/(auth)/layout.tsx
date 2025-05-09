@@ -20,7 +20,7 @@ export default function AuthLayout({
   }, [isAuthenticated, router]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-[#171717]">
       {children}
     </div>
   );
